@@ -36,12 +36,6 @@ body {
   border: black solid 2px;
 }
 
-.center-content {
-  margin: auto;
-  display: inline-block;
-  position: relative;
-}
-
 .next-text {
   opacity: 0.8;
   background: white;

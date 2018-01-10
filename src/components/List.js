@@ -7,15 +7,7 @@ import planetsImg from "../planets.png";
 import starshipsImg from "../starships.jpeg";
 import vehiclesImg from "../vehicles.jpg";
 
-import {
-  Button,
-  Table,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Jumbotron
-} from "reactstrap";
+import { Table } from "reactstrap";
 
 class List extends Component {
   constructor(props) {

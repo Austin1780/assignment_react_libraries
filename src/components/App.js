@@ -1,16 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-import {
-  Button,
-  Table,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Jumbotron
-} from "reactstrap";
-
 //for the router
 import {
   BrowserRouter as Router,
@@ -18,6 +8,8 @@ import {
   NavLink,
   Switch
 } from "react-router-dom";
+
+import { Jumbotron } from "reactstrap";
 
 import ScrollToTop from "./ScrollToTop";
 import img404 from "../404.jpg";
@@ -93,7 +85,9 @@ const App = () => (
           render={() => (
             <div>
               <Jumbotron className="welcome-panel">
-                <h1 className="display-5">Welcome to SWAPI!</h1>
+                <h1 className="display-5">
+                  Welcome to SWAPI- Click BB8 below to begin!
+                </h1>
                 <p className="lead">
                   This is an app that takes data from SWAPI (the Star Wars API)
                   and displays it using React and reactstrap.
