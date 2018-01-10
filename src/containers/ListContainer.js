@@ -1,12 +1,12 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 //our component
 import List from "../components/List";
 
 //actions to be used
-import {starWarsAction} from "../actions";
+import { starWarsAction } from "../actions";
 
 //creating our own container
 class ListContainer extends Component {
@@ -25,7 +25,7 @@ class ListContainer extends Component {
       e.preventDefault();
       let pageNum = e.target.value;
       pageNum = Number(pageNum);
-      await this.setState({page: pageNum});
+      await this.setState({ page: pageNum });
       this.props.starWarsAction(this.state.page);
     } catch (e) {
       console.log(e);
@@ -34,7 +34,7 @@ class ListContainer extends Component {
 
   async switchToFirstPage(e) {
     try {
-      this.setState({page: 1});
+      this.setState({ page: 1 });
     } catch (e) {
       console.log(e);
     }

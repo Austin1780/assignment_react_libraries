@@ -1,6 +1,16 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
+import {
+  Button,
+  Table,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Jumbotron
+} from "reactstrap";
+
 //for the router
 import {
   BrowserRouter as Router,
@@ -17,12 +27,17 @@ import ListContainer from "../containers/ListContainer";
 
 const NavLinks = () => (
   <div className="NavLinks">
-    <NavLink activeClassName="active" className="btn btn-primary" exact to="/">
+    <NavLink
+      activeClassName="active"
+      className="btn btn-primary btn-lg"
+      exact
+      to="/"
+    >
       Home
     </NavLink>{" "}
     <NavLink
       activeClassName="active"
-      className="btn btn-primary"
+      className="btn btn-primary btn-lg"
       exact
       to="/films/pages/1"
     >
@@ -30,35 +45,35 @@ const NavLinks = () => (
     </NavLink>{" "}
     <NavLink
       activeClassName="active"
-      className="btn btn-primary"
+      className="btn btn-primary btn-lg"
       to="/people/pages/1"
     >
       People
     </NavLink>{" "}
     <NavLink
       activeClassName="active"
-      className="btn btn-primary"
+      className="btn btn-primary btn-lg"
       to="/planets/pages/1"
     >
       Planets
     </NavLink>{" "}
     <NavLink
       activeClassName="active"
-      className="btn btn-primary"
+      className="btn btn-primary btn-lg"
       to="/species/pages/1"
     >
       Species
     </NavLink>{" "}
     <NavLink
       activeClassName="active"
-      className="btn btn-primary"
+      className="btn btn-primary btn-lg"
       to="/starships/pages/1"
     >
       Starships
     </NavLink>{" "}
     <NavLink
       activeClassName="active"
-      className="btn btn-primary"
+      className="btn btn-primary btn-lg"
       to="/vehicles/pages/1"
     >
       Vehicles
@@ -77,7 +92,20 @@ const App = () => (
           path="/"
           render={() => (
             <div>
-              <h1>Welcome to SWAPI</h1>
+              <Jumbotron className="welcome-panel">
+                <h1 className="display-5">Welcome to SWAPI!</h1>
+                <p className="lead">
+                  This is an app that takes data from SWAPI (the Star Wars API)
+                  and displays it using React and reactstrap.
+                </p>
+                <hr className="my-2" />
+                <p>
+                  To begin your Star Wars journey click on BB8 below to play the
+                  Star Wars crawl. You can then select a cateogry from the
+                  topics above to view the different films, people, planets,
+                  species, starships, and vehicles.
+                </p>
+              </Jumbotron>
               <iframe
                 src="https://brorlandi.github.io/StarWarsIntroCreator/#!/AL21i2y_rQkWr4U735_M"
                 width="100%"
